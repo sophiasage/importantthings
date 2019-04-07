@@ -1,0 +1,37 @@
+syntax enable
+
+call plug#begin('~/.vim/plugged')
+Plug 'lervag/vimtex'
+call plug#end()
+
+let g:tex_flavor='latex'
+set showcmd
+set wildignore==*.pdf,*.aux
+set nu
+set relativenumber
+set t_Co=256
+nnoremap <leader><space> :noh<cr>
+set incsearch
+set ignorecase
+set smartcase
+set hlsearch
+nnoremap <leader>sh :split<cr>
+nnoremap <leader>sv :vsp<cr>
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+nmap <leader>st :!sage -t %<CR>
+nmap <leader>lt :!pdflatex %<CR>
+colorscheme anderson
+set cursorline! cursorcolumn!
+hi CursorLine cterm=NONE ctermbg=235  ctermfg=153 guibg=black guifg=white
+hi CursorColumn cterm=NONE ctermbg=235 ctermfg=153 guibg=LightRed guifg=white
+nnoremap <leader>c :set cursorline! cursorcolumn!<CR>
+let g:rainbow_active =1
+nnoremap <leader>n :cn<CR>
+nnoremap <leader>p :cp<CR>
+nnoremap ~~ :TComment<CR>
+vnoremap ~~ :TComment<CR>
+set scrolloff=8
+
